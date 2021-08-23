@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
+
+body {
+  color: azure;
+  background-image: url("https://wallpaperaccess.com/full/366025.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContainer {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+}
+
+.nasaPhoto {
+  max-width: 80%;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.nasaDetails {
+  max-width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nasaTitle {
+  margin-bottom: 1rem;
+}
+
+.nasaExp {
+  margin-bottom: 1rem;
+}
+.nasaDate {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+a:-webkit-any-link {
   color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button {
+  background-color: #000;
+  border: none;
+  color: white !important;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  width: 220px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.nav {
+  margin-bottom: 2rem;
 }
